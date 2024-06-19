@@ -8,7 +8,7 @@
 import UIKit
 
 class GitHubAPIService: IssueRepositoryInterface {
-    private let baseURL = "https://api.github.com/repos/your-repo/issues"
+    private let baseURL = "https://api.github.com/repos/kyamisuke/finc-technologies/issues"
     private let decoder = JSONDecoder()
     
     init() {
@@ -16,8 +16,12 @@ class GitHubAPIService: IssueRepositoryInterface {
     }
     
     func fetchIssues() async throws -> [Issue] {
-        let stubData = NSDataAsset(name: "StubData")!
-        let issue = try JSONDecoder().decode([Issue].self, from: stubData.data)
+//        let stubData = NSDataAsset(name: "StubData")!
+        let url = URL(string: baseURL)!
+        let (data, _) = try await URLSession.shared.data(from: url)
+//        let issue = try JSONDecoder().decode([Issue].self, from: stubData.data)
+        var issue = try JSONDecoder().decode([Issue].self, from: data)
+        issue.sort { $0.number < $1.number }
         return issue
     }
     

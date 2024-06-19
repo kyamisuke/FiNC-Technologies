@@ -16,13 +16,13 @@ struct Issue: Decodable {
     let user: User // 一覧画面にアバター画像と名前を表示
     let updatedAt: Date // 一覧画面・詳細画面に表示
     
-    enum CodingKeys: CodingKey {
+    enum CodingKeys: String, CodingKey {
         case number
         case title
         case body
         case url
         case user
-        case updatedAt
+        case updatedAt = "updated_at"
     }
     
     init(from decoder: any Decoder) throws {

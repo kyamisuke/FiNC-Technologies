@@ -11,4 +11,15 @@ import Foundation
 struct User: Decodable {
     let login: String // ユーザー名
     let avatarURL: URL
+    
+    enum CodingKeys: String, CodingKey {
+        case login
+        case avatarURL = "avatar_url"
+    }
+    
+    init(from decoder: any Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.login = try container.decode(String.self, forKey: .login)
+        self.avatarURL = try container.decode(URL.self, forKey: .avatarURL)
+    }
 }
