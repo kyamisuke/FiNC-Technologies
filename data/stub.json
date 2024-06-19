@@ -1,0 +1,223 @@
+[
+    {
+        "number": 1,
+        "title": "アプリが起動時にクラッシュする",
+        "body": "アプリケーションが起動直後にクラッシュします。iPhone 13でiOS 15を使用しています。問題を再現する手順は以下の通りです：\n1. App Storeから最新バージョンをインストールします。\n2. アプリを起動します。\n3. スプラッシュ画面が表示された後、アプリがクラッシュします。",
+        "url": "https://github.com/your-repo/issues/1",
+        "user": {
+            "login": "user1",
+            "avatarURL": "https://avatars.githubusercontent.com/u/1?v=4"
+        },
+        "updatedAt": "2023-06-01T10:00:00Z"
+    },
+    {
+        "number": 2,
+        "title": "ダークモードでのUIレイアウトの問題",
+        "body": "アプリがダークモードの時にいくつかのUIレイアウトの問題があります。テキストやボタンが読みづらくなります。以下にスクリーンショットを添付します：\n![スクリーンショット1](url_to_screenshot_1)\n![スクリーンショット2](url_to_screenshot_2)\n再現手順：\n1. iPhoneをダークモードに切り替えます。\n2. アプリを開きます。\n3. 設定画面に移動します。\n4. テキストが見えなくなり、ボタンがずれていることを確認します。",
+        "url": "https://github.com/your-repo/issues/2",
+        "user": {
+            "login": "user2",
+            "avatarURL": "https://avatars.githubusercontent.com/u/2?v=4"
+        },
+        "updatedAt": "2023-06-02T12:00:00Z"
+    },
+    {
+        "number": 3,
+        "title": "機能リクエスト: ユーザープロフィールページの追加",
+        "body": "ユーザーが自分のプロフィール情報を閲覧および編集できるユーザープロフィールページがあると便利です。以下はプロフィールページに追加することを提案する機能です：\n- ユーザー名、メールアドレス、プロフィール画像を表示。\n- ユーザーが自分の名前とメールアドレスを編集できるようにする。\n- プロフィール画像を変更するオプション。\n- ユーザーが作成およびコメントした問題などの活動履歴を表示。",
+        "url": "https://github.com/your-repo/issues/3",
+        "user": {
+            "login": "user3",
+            "avatarURL": "https://avatars.githubusercontent.com/u/3?v=4"
+        },
+        "updatedAt": "2023-06-03T14:00:00Z"
+    },
+    {
+        "number": 4,
+        "title": "通知が届かない問題",
+        "body": "アプリで通知が届かない問題があります。特定の状況下で通知が機能しないようです。再現手順：\n1. 設定画面で通知を有効にします。\n2. アプリをバックグラウンドにします。\n3. 特定のイベントが発生しますが、通知が届きません。",
+        "url": "https://github.com/your-repo/issues/4",
+        "user": {
+            "login": "user4",
+            "avatarURL": "https://avatars.githubusercontent.com/u/4?v=4"
+        },
+        "updatedAt": "2023-06-04T16:00:00Z"
+    },
+    {
+        "number": 5,
+        "title": "ローカライゼーションの問題",
+        "body": "アプリのローカライゼーションに問題があります。特定の言語での翻訳が正しくありません。修正が必要です。",
+        "url": "https://github.com/your-repo/issues/5",
+        "user": {
+            "login": "user5",
+            "avatarURL": "https://avatars.githubusercontent.com/u/5?v=4"
+        },
+        "updatedAt": "2023-06-05T18:00:00Z"
+    },
+    {
+        "number": 6,
+        "title": "メモリリークの疑い",
+        "body": "アプリが長時間使用されるとメモリ使用量が増加し、最終的にクラッシュします。メモリリークの可能性があります。調査と修正が必要です。",
+        "url": "https://github.com/your-repo/issues/6",
+        "user": {
+            "login": "user6",
+            "avatarURL": "https://avatars.githubusercontent.com/u/6?v=4"
+        },
+        "updatedAt": "2023-06-06T20:00:00Z"
+    },
+    {
+        "number": 7,
+        "title": "音声認識機能のバグ",
+        "body": "音声認識機能が正しく動作しません。特定のフレーズが認識されないことがあります。再現手順：\n1. 設定で音声認識を有効にします。\n2. 特定のフレーズを話します。\n3. 認識結果が期待と異なります。",
+        "url": "https://github.com/your-repo/issues/7",
+        "user": {
+            "login": "user7",
+            "avatarURL": "https://avatars.githubusercontent.com/u/7?v=4"
+        },
+        "updatedAt": "2023-06-07T10:00:00Z"
+    },
+    {
+        "number": 8,
+        "title": "画像のアップロードに失敗する",
+        "body": "画像のアップロード機能が失敗することがあります。特に大きなファイルをアップロードしようとするとエラーが発生します。",
+        "url": "https://github.com/your-repo/issues/8",
+        "user": {
+            "login": "user8",
+            "avatarURL": "https://avatars.githubusercontent.com/u/8?v=4"
+        },
+        "updatedAt": "2023-06-08T12:00:00Z"
+    },
+    {
+        "number": 9,
+        "title": "アプリのパフォーマンスが低下する",
+        "body": "特定の操作を行うとアプリのパフォーマンスが著しく低下します。特に、大量のデータを処理する際に問題が発生します。",
+        "url": "https://github.com/your-repo/issues/9",
+        "user": {
+            "login": "user9",
+            "avatarURL": "https://avatars.githubusercontent.com/u/9?v=4"
+        },
+        "updatedAt": "2023-06-09T14:00:00Z"
+    },
+    {
+        "number": 10,
+        "title": "ダークモードでテキストが見えない",
+        "body": "アプリをダークモードで使用すると、特定の画面でテキストが見えなくなります。修正が必要です。",
+        "url": "https://github.com/your-repo/issues/10",
+        "user": {
+            "login": "user10",
+            "avatarURL": "https://avatars.githubusercontent.com/u/10?v=4"
+        },
+        "updatedAt": "2023-06-10T16:00:00Z"
+    },
+    {
+        "number": 11,
+        "title": "ログイン機能が動作しない",
+        "body": "ログイン機能が特定の条件下で動作しません。エラーメッセージが表示され、ログインできないことがあります。",
+        "url": "https://github.com/your-repo/issues/11",
+        "user": {
+            "login": "user11",
+            "avatarURL": "https://avatars.githubusercontent.com/u/11?v=4"
+        },
+        "updatedAt": "2023-06-11T18:00:00Z"
+    },
+    {
+        "number": 12,
+        "title": "プッシュ通知が届かない",
+        "body": "プッシュ通知が特定の条件下で届かないことがあります。設定を確認し、問題を解決する必要があります。",
+        "url": "https://github.com/your-repo/issues/12",
+        "user": {
+            "login": "user12",
+            "avatarURL": "https://avatars.githubusercontent.com/u/12?v=4"
+        },
+        "updatedAt": "2023-06-12T20:00:00Z"
+    },
+    {
+        "number": 13,
+        "title": "アプリのクラッシュレポート",
+        "body": "アプリが特定の操作を行うとクラッシュします。以下にクラッシュレポートを添付します。\n\n```\nThread 1: signal SIGABRT\n```",
+        "url": "https://github.com/your-repo/issues/13",
+        "user": {
+            "login": "user13",
+            "avatarURL": "https://avatars.githubusercontent.com/u/13?v=4"
+        },
+        "updatedAt": "2023-06-13T10:00:00Z"
+    },
+    {
+        "number": 14,
+        "title": "音声認識の精度が低い",
+        "body": "音声認識の精度が低く、正確に認識されません。改善が必要です。",
+        "url": "https://github.com/your-repo/issues/14",
+        "user": {
+            "login": "user14",
+            "avatarURL": "https://avatars.githubusercontent.com/u/14?v=4"
+        },
+        "updatedAt": "2023-06-14T12:00:00Z"
+    },
+    {
+        "number": 15,
+        "title": "ユーザーインターフェースの改善提案",
+        "body": "ユーザーインターフェースに関する改善提案です。特に、ボタンの配置とテキストのスタイルに関するフィードバックがあります。",
+        "url": "https://github.com/your-repo/issues/15",
+        "user": {
+            "login": "user15",
+            "avatarURL": "https://avatars.githubusercontent.com/u/15?v=4"
+        },
+        "updatedAt": "2023-06-15T14:00:00Z"
+    },
+    {
+        "number": 16,
+        "title": "アプリのメモリ使用量が高い",
+        "body": "アプリのメモリ使用量が高く、特定の操作を行うとデバイスのパフォーマンスが低下します。",
+        "url": "https://github.com/your-repo/issues/16",
+        "user": {
+            "login": "user16",
+            "avatarURL": "https://avatars.githubusercontent.com/u/16?v=4"
+        },
+        "updatedAt": "2023-06-16T16:00:00Z"
+    },
+    {
+        "number": 17,
+        "title": "特定のデバイスでクラッシュする",
+        "body": "特定のデバイス（例：iPad Pro）でアプリがクラッシュする問題があります。調査と修正が必要です。",
+        "url": "https://github.com/your-repo/issues/17",
+        "user": {
+            "login": "user17",
+            "avatarURL": "https://avatars.githubusercontent.com/u/17?v=4"
+        },
+        "updatedAt": "2023-06-17T18:00:00Z"
+    },
+    {
+        "number": 18,
+        "title": "スクロールがスムーズでない",
+        "body": "長いリストをスクロールする際に、スクロールがスムーズでなくカクつくことがあります。",
+        "url": "https://github.com/your-repo/issues/18",
+        "user": {
+            "login": "user18",
+            "avatarURL": "https://avatars.githubusercontent.com/u/18?v=4"
+        },
+        "updatedAt": "2023-06-18T20:00:00Z"
+    },
+    {
+        "number": 19,
+        "title": "画像の表示が遅い",
+        "body": "アプリ内で画像が表示されるまでの時間が長くかかります。画像の読み込みと表示速度を改善する必要があります。",
+        "url": "https://github.com/your-repo/issues/19",
+        "user": {
+            "login": "user19",
+            "avatarURL": "https://avatars.githubusercontent.com/u/19?v=4"
+        },
+        "updatedAt": "2023-06-19T10:00:00Z"
+    },
+    {
+        "number": 20,
+        "title": "アプリの起動が遅い",
+        "body": "アプリの起動時間が長く、特に初回起動時に顕著です。起動時間を短縮する方法を検討する必要があります。",
+        "url": "https://github.com/your-repo/issues/20",
+        "user": {
+            "login": "user20",
+            "avatarURL": "https://avatars.githubusercontent.com/u/20?v=4"
+        },
+        "updatedAt": "2023-06-20T12:00:00Z"
+    }
+]
+

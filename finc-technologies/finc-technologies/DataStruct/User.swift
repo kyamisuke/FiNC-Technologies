@@ -8,7 +8,7 @@
 import Foundation
 
 /// GitHubのユーザーの情報
-struct User {
+struct User: Decodable {
     let login: String // ユーザー名
-    let avaterURL: URL
+    let avatarURL: URL
 }
