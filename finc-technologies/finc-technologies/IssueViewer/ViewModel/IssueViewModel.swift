@@ -20,7 +20,9 @@ class IssueViewModel {
     func updateIssues() async {
         do {
             let issues = try await gitHubAPIService.fetchIssues()
-            issueModel.updateIssues(issues: issues)
+            DispatchQueue.main.async {
+                self.issueModel.updateIssues(issues: issues)
+            }
         } catch(let e) {
             print("error [updateIssues]: \(e)")
         }

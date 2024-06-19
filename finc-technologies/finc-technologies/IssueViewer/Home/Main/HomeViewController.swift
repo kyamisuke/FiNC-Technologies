@@ -14,19 +14,30 @@ class HomeViewController: UIViewController {
     let disposeBag = DisposeBag()
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var label: UILabel!
+    var issues: [Issue]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Home")
         // Do any additional setup after loading the view.
+        collectionView.delegate = self
+        
+        collectionView.register(UINib(nibName: "IssuesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "IssuesCollectionViewCell")
+        
         Task {
             await issueViewModel.updateIssues()
         }
         
-        issueViewModel.issues.subscribe(onNext: { [weak self] value in
-            print("value = \(value)")
-        })
-        .disposed(by: disposeBag)
+        issueViewModel.issues.subscribe(onNext: updateCollectionView)
+            .disposed(by: disposeBag)
+        
+//        if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+//            flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+//        }
+    }
+    
+    func updateCollectionView(value: [Issue]?) {
+        issues = value
+        collectionView.reloadData()
     }
     
     
@@ -40,4 +51,37 @@ class HomeViewController: UIViewController {
      }
      */
     
+}
+
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return issues?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        //storyboard上のセルを生成　storyboardのIdentifierで付けたものをここで設定する
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IssuesCollectionViewCell", for: indexPath) as! IssuesCollectionViewCell
+        if let issue = issues?[indexPath.row] {
+            cell.setData(data: issue)
+        }
+        
+        return cell
+    }
+}
+
+// セルのサイズを調整する
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    // セルサイズを指定する
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // 横方向のサイズを調整
+        let cellSizeWidth: CGFloat = collectionView.frame.width / 1.05
+        let cellSizeHeight: CGFloat = 100
+        // widthとheightのサイズを返す
+        return CGSize(width: cellSizeWidth, height: cellSizeHeight)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10.0 // 行間
+    }
+
 }
