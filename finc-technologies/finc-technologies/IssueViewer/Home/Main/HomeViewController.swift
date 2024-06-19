@@ -13,7 +13,6 @@ class HomeViewController: UIViewController {
     var issueViewModel = IssueViewModel()
     let disposeBag = DisposeBag()
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var label: UILabel!
     var issues: [Issue]?
     
     override func viewDidLoad() {
@@ -66,6 +65,21 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        DispatchQueue.main.async {
+            let cell = collectionView.cellForItem(at: indexPath) as! IssuesCollectionViewCell
+            let storyboard = UIStoryboard(name: "IssueDetailView", bundle: nil)
+            if let vc = storyboard.instantiateViewController(withIdentifier: "IssueDetailViewController") as? IssueDetailViewController {
+                // viewControllerの設定や表示処理を行う
+                vc.issueNumber = cell.number
+                vc.issueViewModel = self.issueViewModel
+                self.navigationController?.pushViewController(vc, animated: true)
+            } else {
+                print("ViewController with identifier 'IssueDetailViewController' could not be instantiated.")
+            }
+        }
     }
 }
 

@@ -27,4 +27,14 @@ class IssueViewModel {
             print("error [updateIssues]: \(e)")
         }
     }
+    
+    func getIssueDetail(number: Int) async -> Issue? {
+        do {
+            let issue = try await gitHubAPIService.fetchIssue(number: number)
+            return issue
+        } catch(let e) {
+            print("error [updateIssues]: \(e)")
+            return nil
+        }
+    }
 }

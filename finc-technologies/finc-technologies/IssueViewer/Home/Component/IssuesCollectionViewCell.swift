@@ -14,6 +14,7 @@ class IssuesCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var updatedAt: UILabel!
     @IBOutlet weak var rootView: UIStackView!
     let formatter = DateFormatter()
+    var number: Int!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,6 +36,7 @@ class IssuesCollectionViewCell: UICollectionViewCell {
         title.text = data.title
         name.text = data.user.login
         updatedAt.text = formatter.string(from: data.updatedAt)
+        number = data.number
     }
         
     func getHeight() -> CGFloat {
