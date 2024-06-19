@@ -36,9 +36,12 @@ class CompleteViewController: UIViewController {
     func fetchImage(url: URL) async throws {
         let url = url
         let (data, _) = try await URLSession.shared.data(from: url)
-        guard let image = UIImage(data: data) else {
-            userAvatarImage.image = UIImage(systemName: "person.fill.questionmark")
-            return
+        DispatchQueue.main.async {
+            guard let image = UIImage(data: data) else {
+                self.userAvatarImage.image = UIImage(systemName: "person.fill.questionmark")
+                return
+            }
+            self.userAvatarImage.image = image
         }
         userAvatarImage.image = image
     }

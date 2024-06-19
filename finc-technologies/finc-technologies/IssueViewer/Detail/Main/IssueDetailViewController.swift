@@ -27,12 +27,14 @@ class IssueDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        add(asChildViewController: loadingViewController)
         Task {
-            add(asChildViewController: loadingViewController)
             if let issue = await issueViewModel.getIssueDetail(number: issueNumber) {
-                remove(asChildViewController: loadingViewController)
                 await completeViewController.setData(issue: issue)
-                add(asChildViewController: completeViewController)
+                DispatchQueue.main.async {
+                    self.remove(asChildViewController: self.loadingViewController)
+                    self.add(asChildViewController: self.completeViewController)
+                }
             } else {
                 
             }
