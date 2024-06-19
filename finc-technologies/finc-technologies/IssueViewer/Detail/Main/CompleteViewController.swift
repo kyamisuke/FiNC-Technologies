@@ -9,6 +9,11 @@ import UIKit
 
 class CompleteViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var userAvatarImage: UIImageView!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var updatedAtLabel: UILabel!
+    @IBOutlet weak var bodyLabel: UITextView!
+    let formatter = MyDateFormatter.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,8 +21,26 @@ class CompleteViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func setData(issue: Issue) {
+    func setData(issue: Issue) async {
         titleLabel.text = issue.title
+        do {
+            try await self.fetchImage(url: issue.user.avatarURL)
+        } catch(let e) {
+            print(e)
+        }
+        userNameLabel.text = issue.user.login
+        updatedAtLabel.text = formatter.string(from: issue.updatedAt)
+        bodyLabel.text = issue.body
+    }
+    
+    func fetchImage(url: URL) async throws {
+        let url = url
+        let (data, _) = try await URLSession.shared.data(from: url)
+        guard let image = UIImage(data: data) else {
+            userAvatarImage.image = UIImage(systemName: "person.fill.questionmark")
+            return
+        }
+        userAvatarImage.image = image
     }
     
     /*

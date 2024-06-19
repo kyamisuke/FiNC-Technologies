@@ -13,13 +13,12 @@ class IssuesCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var name: UILabel!
     @IBOutlet private weak var updatedAt: UILabel!
     @IBOutlet weak var rootView: UIStackView!
-    let formatter = DateFormatter()
+    let formatter = MyDateFormatter.shared
     var number: Int!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        formatter.dateFormat = "yyyy年M月d日 H:mm"
         //cellの枠の太さ
         self.layer.borderWidth = 1
         //cellの枠の色

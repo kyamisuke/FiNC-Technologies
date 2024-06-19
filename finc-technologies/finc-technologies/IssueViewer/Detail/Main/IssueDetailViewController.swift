@@ -30,9 +30,8 @@ class IssueDetailViewController: UIViewController {
         Task {
             add(asChildViewController: loadingViewController)
             if let issue = await issueViewModel.getIssueDetail(number: issueNumber) {
-                print(issue)
                 remove(asChildViewController: loadingViewController)
-                completeViewController.setData(issue: issue)
+                await completeViewController.setData(issue: issue)
                 add(asChildViewController: completeViewController)
             } else {
                 
