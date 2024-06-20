@@ -10,6 +10,7 @@ import RxSwift
 import RxCocoa
 
 class HomeViewController: UIViewController {
+    // ViewModelのインスタンス生成
     var issueViewModel = IssueViewModel()
     let disposeBag = DisposeBag()
     @IBOutlet weak var collectionView: UICollectionView!
@@ -19,14 +20,16 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         collectionView.delegate = self
-        
         collectionView.register(UINib(nibName: "IssuesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "IssuesCollectionViewCell")
         
+        // 画面表示と同時にViewModelにIssue一覧取得をリクエストする
         Task {
             await issueViewModel.updateIssues()
         }
         
-        issueViewModel.issues.subscribe(onNext: updateCollectionView)
+        // 一覧取得したらRxで通知が届くので購読
+        issueViewModel.issues
+            .subscribe(onNext: updateCollectionView)
             .disposed(by: disposeBag)
         
 //        if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
@@ -34,6 +37,7 @@ class HomeViewController: UIViewController {
 //        }
     }
     
+    // Issue一覧を取得したらCollectionViewを更新
     func updateCollectionView(value: [Issue]?) {
         issues = value
         collectionView.reloadData()
@@ -52,6 +56,7 @@ class HomeViewController: UIViewController {
     
 }
 
+// CollectionViewの設定
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return issues?.count ?? 0

@@ -31,6 +31,7 @@ class IssuesCollectionViewCell: UICollectionViewCell {
         self.layer.masksToBounds = false
     }
     
+    /// Issueを設定
     func setData(data: Issue) {
         title.text = data.title
         name.text = data.user.login
