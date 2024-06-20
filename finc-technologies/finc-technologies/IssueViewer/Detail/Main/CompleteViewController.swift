@@ -9,10 +9,12 @@ import UIKit
 
 class CompleteViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var linkButton: UIButton!
     @IBOutlet weak var userAvatarImage: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var updatedAtLabel: UILabel!
     @IBOutlet weak var bodyLabel: UITextView!
+    @IBOutlet weak var contentView: UIView!
     let formatter = MyDateFormatter.shared
     
     override func viewDidLoad() {
@@ -22,6 +24,7 @@ class CompleteViewController: UIViewController {
         bodyLabel.isEditable = false
     }
     
+    /// Issueデータを適用する
     func setData(issue: Issue) async {
         titleLabel.text = issue.title
         do {
@@ -32,8 +35,11 @@ class CompleteViewController: UIViewController {
         userNameLabel.text = issue.user.login
         updatedAtLabel.text = formatter.string(from: issue.updatedAt)
         bodyLabel.text = issue.body
+        // 高さを揃える
+        adjustHeight()
     }
     
+    /// Gitのアカウント画像を読み込む
     func fetchImage(url: URL) async throws {
         let url = url
         let (data, _) = try await URLSession.shared.data(from: url)
@@ -44,7 +50,25 @@ class CompleteViewController: UIViewController {
             }
             self.userAvatarImage.image = image
         }
-        userAvatarImage.image = image
+    }
+    
+    func getHeight() -> CGFloat {
+        let inset16: CGFloat = 16
+        let inset4: CGFloat = 4
+        let inset32: CGFloat = 32
+        let inset8: CGFloat = 8
+        let inset24: CGFloat = 24
+        
+        return inset16 + titleLabel.bounds.height + inset4 +  linkButton.bounds.height + inset32 +  userAvatarImage.bounds.height + inset8 +  updatedAtLabel.bounds.height + inset24 + bodyLabel.bounds.height + inset16
+    }
+    
+    /// コンテンツの高さを調整する
+    func adjustHeight() {
+        let bodyHeight = bodyLabel.sizeThatFits(CGSize(width: bodyLabel.frame.size.width, height: CGFloat.greatestFiniteMagnitude)).height
+        bodyLabel.heightAnchor.constraint(equalToConstant: bodyHeight).isActive = true
+//        let contentHeight: CGFloat = getHeight()
+//        print(getHeight())
+        contentView.heightAnchor.constraint(equalToConstant: 1100).isActive = true
     }
     
     /*
