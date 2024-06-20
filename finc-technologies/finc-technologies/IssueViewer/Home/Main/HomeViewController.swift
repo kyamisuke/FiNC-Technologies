@@ -28,7 +28,8 @@ class HomeViewController: UIViewController {
         }
         
         // 一覧取得したらRxで通知が届くので購読
-        issueViewModel.issues
+        issueViewModel.IssuesObservable
+            .skip(while: { value in return value == nil})
             .subscribe(onNext: updateCollectionView)
             .disposed(by: disposeBag)
         

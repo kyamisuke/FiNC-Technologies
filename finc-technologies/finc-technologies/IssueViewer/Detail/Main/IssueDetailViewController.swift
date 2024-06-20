@@ -19,7 +19,7 @@ class IssueDetailViewController: UIViewController {
     var issueViewModel: IssueViewModel!
     
     // 画面の状態を管理する変数
-    private var state = BehaviorSubject<ConnectState>(value: .Loading)
+    private var state = PublishSubject<ConnectState>()
     private var preState: ConnectState?
     
     let disposeBag = DisposeBag()
@@ -60,6 +60,7 @@ class IssueDetailViewController: UIViewController {
         state
             .subscribe(onNext: updateState)
             .disposed(by: disposeBag)
+        state.onNext(.Loading)
     }
     
     // 再接続処理

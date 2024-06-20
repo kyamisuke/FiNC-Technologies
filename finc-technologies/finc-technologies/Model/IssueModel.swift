@@ -10,14 +10,15 @@ import RxSwift
 import RxRelay
 
 class IssueModel {
-    private var issues = PublishSubject<[Issue]?>()
-    var Issues: Observable<[Issue]?> {
+    // 今後一覧を保存することなどを見越してBehaviourを発行
+    private var issuesSubject = BehaviorSubject<[Issue]?>(value: nil)
+    var IssuesObservable: Observable<[Issue]?> {
         get {
-            return issues.asObservable()
+            return issuesSubject.asObservable()
         }
     }
     
     func updateIssues(issues: [Issue]) {
-        self.issues.onNext(issues)
+        issuesSubject.onNext(issues)
     }
 }
