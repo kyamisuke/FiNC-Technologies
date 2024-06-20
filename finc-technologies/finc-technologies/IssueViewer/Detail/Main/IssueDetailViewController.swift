@@ -17,8 +17,11 @@ class IssueDetailViewController: UIViewController {
     
     var issueNumber: Int!
     var issueViewModel: IssueViewModel!
+    
+    // 画面の状態を管理する変数
     private var state = BehaviorSubject<ConnectState>(value: .Loading)
-    var currentVC: ViewController?
+    private var preState: ConnectState?
+    
     let disposeBag = DisposeBag()
     
     // 通信成功時の画面
@@ -48,30 +51,35 @@ class IssueDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         // failed画面からの通知を購読
         failedViewController.reconnectSubject
-            .skip(1)
             .subscribe(onNext: {
-                print("reconnect")
                 self.reconnect()
             })
             .disposed(by: disposeBag)
+        // 画面の状態を管理
+        // 初期値はLoading
         state
             .subscribe(onNext: updateState)
             .disposed(by: disposeBag)
     }
     
+    // 再接続処理
     private func reconnect() {
-        remove(asChildViewController: self.failedViewController)
         state.onNext(.Loading)
     }
     
+    // 通信処理
     private func connect() {
         Task {
+            // issueの詳細の取得を試みる
             if let issue = await issueViewModel.getIssueDetail(number: issueNumber) {
+                // 成功したらVCに情報を伝える
                 await completeViewController.setData(issue: issue)
+                // 状態の更新
                 DispatchQueue.main.async {
                     self.state.onNext(.Complete)
                 }
             } else {
+                // 状態の更新
                 DispatchQueue.main.async {
                     self.state.onNext(.Failed)
                 }
@@ -84,9 +92,13 @@ class IssueDetailViewController: UIViewController {
         }
     }
     
+    // 画面の状態を管理する
     private func updateState(state: ConnectState) {
         switch state {
         case .Loading:
+            if preState != nil && preState == .Failed {
+                remove(asChildViewController: failedViewController)
+            }
             add(asChildViewController: loadingViewController)
             connect()
         case .Complete:
@@ -97,8 +109,10 @@ class IssueDetailViewController: UIViewController {
             add(asChildViewController: failedViewController)
             failedViewController.appearAlert()
         }
+        preState = state
     }
     
+    // 子ビューを追加する
     private func add(asChildViewController viewController: UIViewController) {
         // 子ViewControllerを追加
         addChild(viewController)
@@ -111,6 +125,7 @@ class IssueDetailViewController: UIViewController {
         viewController.didMove(toParent: self)
     }
     
+    // 子ビューを削除する
     private func remove(asChildViewController viewController: UIViewController) {
         // 子View Controllerへの通知
         viewController.willMove(toParent: nil)
