@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class CompleteViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
@@ -16,6 +17,7 @@ class CompleteViewController: UIViewController {
     @IBOutlet weak var bodyLabel: UITextView!
     @IBOutlet weak var contentView: UIView!
     let formatter = MyDateFormatter.shared
+    var url: URL!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,7 @@ class CompleteViewController: UIViewController {
         userNameLabel.text = issue.user.login
         updatedAtLabel.text = formatter.string(from: issue.updatedAt)
         bodyLabel.text = issue.body
+        url = issue.url
         // 高さを揃える
         adjustHeight()
     }
@@ -69,6 +72,11 @@ class CompleteViewController: UIViewController {
 //        let contentHeight: CGFloat = getHeight()
 //        print(getHeight())
         contentView.heightAnchor.constraint(equalToConstant: 1100).isActive = true
+    }
+    
+    @IBAction func tapURLButton(_ sender: Any) {
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated: true)
     }
     
     /*

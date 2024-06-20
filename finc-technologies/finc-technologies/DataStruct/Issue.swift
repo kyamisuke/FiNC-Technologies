@@ -20,7 +20,7 @@ struct Issue: Decodable {
         case number
         case title
         case body
-        case url
+        case url = "html_url"
         case user
         case updatedAt = "updated_at"
     }
