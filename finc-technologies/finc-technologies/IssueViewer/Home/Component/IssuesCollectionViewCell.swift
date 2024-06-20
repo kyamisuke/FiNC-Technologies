@@ -13,6 +13,7 @@ class IssuesCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var name: UILabel!
     @IBOutlet private weak var updatedAt: UILabel!
     @IBOutlet weak var rootView: UIStackView!
+    @IBOutlet weak var avatarImageView: UIImageView!
     let formatter = MyDateFormatter.shared
     var number: Int!
     
@@ -37,6 +38,18 @@ class IssuesCollectionViewCell: UICollectionViewCell {
         name.text = data.user.login
         updatedAt.text = formatter.string(from: data.updatedAt)
         number = data.number
+        Task {
+            await fetchImage(data)
+        }
+    }
+    
+    func fetchImage(_ issue: Issue) async {
+        do {
+            let (data, _) = try await URLSession.shared.data(from: issue.user.avatarURL)
+            avatarImageView.image = UIImage(data: data)
+        } catch (let e) {
+            print(e)
+        }
     }
         
     func getHeight() -> CGFloat {
