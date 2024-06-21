@@ -2,6 +2,7 @@
 - MVVM
   - 今後大規模プロジェクトになることを見越し、変更に強いモデルを採択
   - 自分なりに調べ、MVCの採択が多いようだが、データバインディングによる構造が保守性の高さに影響しているとの情報を受け、MVVMを採択した
+  - https://zenn.dev/marimoofficial/scraps/24614dd5720e1a
 - 一覧画面
   - 画面表示と同時にViewModelに一覧取得を依頼
   - ViewModelからServiceにAPIを叩くことをリクエスト
