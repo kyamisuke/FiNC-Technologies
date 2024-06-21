@@ -1,0 +1,799 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F9033102C2170DE00514E6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F90330F2C2170DE00514E6B /* AppDelegate.swift */; };
+		8F9033122C2170DE00514E6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9033112C2170DE00514E6B /* SceneDelegate.swift */; };
+		8F9033142C2170DE00514E6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9033132C2170DE00514E6B /* ViewController.swift */; };
+		8F9033172C2170DE00514E6B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8F9033162C2170DE00514E6B /* Base */; };
+		8F9033192C2170DF00514E6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F9033182C2170DF00514E6B /* Assets.xcassets */; };
+		8F90331C2C2170DF00514E6B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8F90331B2C2170DF00514E6B /* Base */; };
+		8F9033272C2170E000514E6B /* finc_technologiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9033262C2170E000514E6B /* finc_technologiesTests.swift */; };
+		8F9033312C2170E000514E6B /* finc_technologiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9033302C2170E000514E6B /* finc_technologiesUITests.swift */; };
+		8F9033332C2170E000514E6B /* finc_technologiesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9033322C2170E000514E6B /* finc_technologiesUITestsLaunchTests.swift */; };
+		8F9033412C2176C400514E6B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9033402C2176C400514E6B /* User.swift */; };
+		8F9033432C2176D400514E6B /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9033422C2176D400514E6B /* Issue.swift */; };
+		8F9033452C2176F000514E6B /* IssueRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9033442C2176F000514E6B /* IssueRepositoryInterface.swift */; };
+		8F9CE9332C23C2BA00D82F3B /* FailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9CE9322C23C2BA00D82F3B /* FailedViewController.swift */; };
+		8FB2DD1E2C217B8A0061D9D8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2DD1B2C217B8A0061D9D8 /* HomeViewController.swift */; };
+		8FB2DD202C217BA80061D9D8 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2DD1F2C217BA80061D9D8 /* Home.storyboard */; };
+		8FB2DD242C2180BF0061D9D8 /* GitHubAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2DD232C2180BF0061D9D8 /* GitHubAPIService.swift */; };
+		8FB2DD292C21B3200061D9D8 /* IssueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2DD282C21B3200061D9D8 /* IssueModel.swift */; };
+		8FB2DD2B2C21B3D10061D9D8 /* IssueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2DD2A2C21B3D10061D9D8 /* IssueViewModel.swift */; };
+		8FB2DD2E2C21B8300061D9D8 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8FB2DD2D2C21B8300061D9D8 /* RxCocoa */; };
+		8FB2DD302C21B8300061D9D8 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 8FB2DD2F2C21B8300061D9D8 /* RxRelay */; };
+		8FB2DD332C22871F0061D9D8 /* IssuesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2DD322C22871F0061D9D8 /* IssuesCollectionViewCell.xib */; };
+		8FB2DD342C22871F0061D9D8 /* IssuesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2DD312C22871F0061D9D8 /* IssuesCollectionViewCell.swift */; };
+		8FB2DD382C22B1CD0061D9D8 /* IssueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2DD372C22B1CD0061D9D8 /* IssueDetailViewController.swift */; };
+		8FB2DD3A2C22B1E60061D9D8 /* IssueDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2DD392C22B1E60061D9D8 /* IssueDetailView.storyboard */; };
+		8FFA6F412C22DB1C003E1B3E /* CompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA6F402C22DB1C003E1B3E /* CompleteViewController.swift */; };
+		8FFA6F432C22E037003E1B3E /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA6F422C22E037003E1B3E /* LoadingViewController.swift */; };
+		8FFA6F462C22E84C003E1B3E /* MyDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA6F452C22E84C003E1B3E /* MyDateFormatter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F9033232C2170E000514E6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F9033042C2170DE00514E6B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F90330B2C2170DE00514E6B;
+			remoteInfo = "finc-technologies";
+		};
+		8F90332D2C2170E000514E6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F9033042C2170DE00514E6B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F90330B2C2170DE00514E6B;
+			remoteInfo = "finc-technologies";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8F90330C2C2170DE00514E6B /* finc-technologies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "finc-technologies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F90330F2C2170DE00514E6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8F9033112C2170DE00514E6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8F9033132C2170DE00514E6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8F9033162C2170DE00514E6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8F9033182C2170DF00514E6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F90331B2C2170DF00514E6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8F90331D2C2170DF00514E6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F9033222C2170E000514E6B /* finc-technologiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "finc-technologiesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F9033262C2170E000514E6B /* finc_technologiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finc_technologiesTests.swift; sourceTree = "<group>"; };
+		8F90332C2C2170E000514E6B /* finc-technologiesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "finc-technologiesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F9033302C2170E000514E6B /* finc_technologiesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finc_technologiesUITests.swift; sourceTree = "<group>"; };
+		8F9033322C2170E000514E6B /* finc_technologiesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finc_technologiesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8F9033402C2176C400514E6B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8F9033422C2176D400514E6B /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		8F9033442C2176F000514E6B /* IssueRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRepositoryInterface.swift; sourceTree = "<group>"; };
+		8F9CE9322C23C2BA00D82F3B /* FailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailedViewController.swift; sourceTree = "<group>"; };
+		8FB2DD1B2C217B8A0061D9D8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8FB2DD1F2C217BA80061D9D8 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		8FB2DD232C2180BF0061D9D8 /* GitHubAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPIService.swift; sourceTree = "<group>"; };
+		8FB2DD282C21B3200061D9D8 /* IssueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueModel.swift; sourceTree = "<group>"; };
+		8FB2DD2A2C21B3D10061D9D8 /* IssueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueViewModel.swift; sourceTree = "<group>"; };
+		8FB2DD312C22871F0061D9D8 /* IssuesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesCollectionViewCell.swift; sourceTree = "<group>"; };
+		8FB2DD322C22871F0061D9D8 /* IssuesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IssuesCollectionViewCell.xib; sourceTree = "<group>"; };
+		8FB2DD372C22B1CD0061D9D8 /* IssueDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetailViewController.swift; sourceTree = "<group>"; };
+		8FB2DD392C22B1E60061D9D8 /* IssueDetailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IssueDetailView.storyboard; sourceTree = "<group>"; };
+		8FFA6F402C22DB1C003E1B3E /* CompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
+		8FFA6F422C22E037003E1B3E /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		8FFA6F452C22E84C003E1B3E /* MyDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDateFormatter.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F9033092C2170DE00514E6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FB2DD302C21B8300061D9D8 /* RxRelay in Frameworks */,
+				8FB2DD2E2C21B8300061D9D8 /* RxCocoa in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F90331F2C2170E000514E6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F9033292C2170E000514E6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F9033032C2170DE00514E6B = {
+			isa = PBXGroup;
+			children = (
+				8F90330E2C2170DE00514E6B /* finc-technologies */,
+				8F9033252C2170E000514E6B /* finc-technologiesTests */,
+				8F90332F2C2170E000514E6B /* finc-technologiesUITests */,
+				8F90330D2C2170DE00514E6B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8F90330D2C2170DE00514E6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F90330C2C2170DE00514E6B /* finc-technologies.app */,
+				8F9033222C2170E000514E6B /* finc-technologiesTests.xctest */,
+				8F90332C2C2170E000514E6B /* finc-technologiesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F90330E2C2170DE00514E6B /* finc-technologies */ = {
+			isa = PBXGroup;
+			children = (
+				8FFA6F442C22E81F003E1B3E /* Util */,
+				8FB2DD272C21B30C0061D9D8 /* Model */,
+				8FB2DD222C21808D0061D9D8 /* Network */,
+				8FB2DD262C21B2FE0061D9D8 /* ViewModel */,
+				8FB2DD112C217A5D0061D9D8 /* IssueViewer */,
+				8F90333F2C21768E00514E6B /* DataStruct */,
+				8F90330F2C2170DE00514E6B /* AppDelegate.swift */,
+				8F9033112C2170DE00514E6B /* SceneDelegate.swift */,
+				8F9033132C2170DE00514E6B /* ViewController.swift */,
+				8F9033152C2170DE00514E6B /* Main.storyboard */,
+				8F9033182C2170DF00514E6B /* Assets.xcassets */,
+				8F90331A2C2170DF00514E6B /* LaunchScreen.storyboard */,
+				8F90331D2C2170DF00514E6B /* Info.plist */,
+			);
+			path = "finc-technologies";
+			sourceTree = "<group>";
+		};
+		8F9033252C2170E000514E6B /* finc-technologiesTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F9033262C2170E000514E6B /* finc_technologiesTests.swift */,
+			);
+			path = "finc-technologiesTests";
+			sourceTree = "<group>";
+		};
+		8F90332F2C2170E000514E6B /* finc-technologiesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8F9033302C2170E000514E6B /* finc_technologiesUITests.swift */,
+				8F9033322C2170E000514E6B /* finc_technologiesUITestsLaunchTests.swift */,
+			);
+			path = "finc-technologiesUITests";
+			sourceTree = "<group>";
+		};
+		8F90333F2C21768E00514E6B /* DataStruct */ = {
+			isa = PBXGroup;
+			children = (
+				8F9033402C2176C400514E6B /* User.swift */,
+				8F9033422C2176D400514E6B /* Issue.swift */,
+				8F9033442C2176F000514E6B /* IssueRepositoryInterface.swift */,
+			);
+			path = DataStruct;
+			sourceTree = "<group>";
+		};
+		8FB2DD112C217A5D0061D9D8 /* IssueViewer */ = {
+			isa = PBXGroup;
+			children = (
+				8FB2DD352C22B1930061D9D8 /* Detail */,
+				8FB2DD122C217A6A0061D9D8 /* Home */,
+			);
+			path = IssueViewer;
+			sourceTree = "<group>";
+		};
+		8FB2DD122C217A6A0061D9D8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8FB2DD1A2C217B120061D9D8 /* Main */,
+				8FB2DD192C217B040061D9D8 /* Component */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8FB2DD192C217B040061D9D8 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				8FB2DD312C22871F0061D9D8 /* IssuesCollectionViewCell.swift */,
+				8FB2DD322C22871F0061D9D8 /* IssuesCollectionViewCell.xib */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		8FB2DD1A2C217B120061D9D8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8FB2DD1B2C217B8A0061D9D8 /* HomeViewController.swift */,
+				8FB2DD1F2C217BA80061D9D8 /* Home.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8FB2DD222C21808D0061D9D8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8FB2DD232C2180BF0061D9D8 /* GitHubAPIService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8FB2DD262C21B2FE0061D9D8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8FB2DD2A2C21B3D10061D9D8 /* IssueViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8FB2DD272C21B30C0061D9D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8FB2DD282C21B3200061D9D8 /* IssueModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8FB2DD352C22B1930061D9D8 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8FB2DD362C22B1B10061D9D8 /* Main */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		8FB2DD362C22B1B10061D9D8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8FB2DD372C22B1CD0061D9D8 /* IssueDetailViewController.swift */,
+				8FB2DD392C22B1E60061D9D8 /* IssueDetailView.storyboard */,
+				8FFA6F402C22DB1C003E1B3E /* CompleteViewController.swift */,
+				8FFA6F422C22E037003E1B3E /* LoadingViewController.swift */,
+				8F9CE9322C23C2BA00D82F3B /* FailedViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8FFA6F442C22E81F003E1B3E /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8FFA6F452C22E84C003E1B3E /* MyDateFormatter.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F90330B2C2170DE00514E6B /* finc-technologies */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F9033362C2170E000514E6B /* Build configuration list for PBXNativeTarget "finc-technologies" */;
+			buildPhases = (
+				8F9033082C2170DE00514E6B /* Sources */,
+				8F9033092C2170DE00514E6B /* Frameworks */,
+				8F90330A2C2170DE00514E6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "finc-technologies";
+			packageProductDependencies = (
+				8FB2DD2D2C21B8300061D9D8 /* RxCocoa */,
+				8FB2DD2F2C21B8300061D9D8 /* RxRelay */,
+			);
+			productName = "finc-technologies";
+			productReference = 8F90330C2C2170DE00514E6B /* finc-technologies.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8F9033212C2170E000514E6B /* finc-technologiesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F9033392C2170E000514E6B /* Build configuration list for PBXNativeTarget "finc-technologiesTests" */;
+			buildPhases = (
+				8F90331E2C2170E000514E6B /* Sources */,
+				8F90331F2C2170E000514E6B /* Frameworks */,
+				8F9033202C2170E000514E6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F9033242C2170E000514E6B /* PBXTargetDependency */,
+			);
+			name = "finc-technologiesTests";
+			productName = "finc-technologiesTests";
+			productReference = 8F9033222C2170E000514E6B /* finc-technologiesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8F90332B2C2170E000514E6B /* finc-technologiesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F90333C2C2170E000514E6B /* Build configuration list for PBXNativeTarget "finc-technologiesUITests" */;
+			buildPhases = (
+				8F9033282C2170E000514E6B /* Sources */,
+				8F9033292C2170E000514E6B /* Frameworks */,
+				8F90332A2C2170E000514E6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F90332E2C2170E000514E6B /* PBXTargetDependency */,
+			);
+			name = "finc-technologiesUITests";
+			productName = "finc-technologiesUITests";
+			productReference = 8F90332C2C2170E000514E6B /* finc-technologiesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F9033042C2170DE00514E6B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					8F90330B2C2170DE00514E6B = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					8F9033212C2170E000514E6B = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 8F90330B2C2170DE00514E6B;
+					};
+					8F90332B2C2170E000514E6B = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 8F90330B2C2170DE00514E6B;
+					};
+				};
+			};
+			buildConfigurationList = 8F9033072C2170DE00514E6B /* Build configuration list for PBXProject "finc-technologies" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8F9033032C2170DE00514E6B;
+			packageReferences = (
+				8FB2DD2C2C21B8050061D9D8 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
+			productRefGroup = 8F90330D2C2170DE00514E6B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F90330B2C2170DE00514E6B /* finc-technologies */,
+				8F9033212C2170E000514E6B /* finc-technologiesTests */,
+				8F90332B2C2170E000514E6B /* finc-technologiesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8F90330A2C2170DE00514E6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FB2DD332C22871F0061D9D8 /* IssuesCollectionViewCell.xib in Resources */,
+				8F9033192C2170DF00514E6B /* Assets.xcassets in Resources */,
+				8FB2DD3A2C22B1E60061D9D8 /* IssueDetailView.storyboard in Resources */,
+				8F90331C2C2170DF00514E6B /* Base in Resources */,
+				8F9033172C2170DE00514E6B /* Base in Resources */,
+				8FB2DD202C217BA80061D9D8 /* Home.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F9033202C2170E000514E6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F90332A2C2170E000514E6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F9033082C2170DE00514E6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F9033432C2176D400514E6B /* Issue.swift in Sources */,
+				8F9033412C2176C400514E6B /* User.swift in Sources */,
+				8FB2DD342C22871F0061D9D8 /* IssuesCollectionViewCell.swift in Sources */,
+				8FB2DD2B2C21B3D10061D9D8 /* IssueViewModel.swift in Sources */,
+				8F9033142C2170DE00514E6B /* ViewController.swift in Sources */,
+				8FB2DD382C22B1CD0061D9D8 /* IssueDetailViewController.swift in Sources */,
+				8FB2DD292C21B3200061D9D8 /* IssueModel.swift in Sources */,
+				8FFA6F432C22E037003E1B3E /* LoadingViewController.swift in Sources */,
+				8F9033102C2170DE00514E6B /* AppDelegate.swift in Sources */,
+				8F9CE9332C23C2BA00D82F3B /* FailedViewController.swift in Sources */,
+				8F9033122C2170DE00514E6B /* SceneDelegate.swift in Sources */,
+				8FFA6F462C22E84C003E1B3E /* MyDateFormatter.swift in Sources */,
+				8FB2DD1E2C217B8A0061D9D8 /* HomeViewController.swift in Sources */,
+				8F9033452C2176F000514E6B /* IssueRepositoryInterface.swift in Sources */,
+				8FB2DD242C2180BF0061D9D8 /* GitHubAPIService.swift in Sources */,
+				8FFA6F412C22DB1C003E1B3E /* CompleteViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F90331E2C2170E000514E6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F9033272C2170E000514E6B /* finc_technologiesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F9033282C2170E000514E6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F9033332C2170E000514E6B /* finc_technologiesUITestsLaunchTests.swift in Sources */,
+				8F9033312C2170E000514E6B /* finc_technologiesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F9033242C2170E000514E6B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F90330B2C2170DE00514E6B /* finc-technologies */;
+			targetProxy = 8F9033232C2170E000514E6B /* PBXContainerItemProxy */;
+		};
+		8F90332E2C2170E000514E6B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F90330B2C2170DE00514E6B /* finc-technologies */;
+			targetProxy = 8F90332D2C2170E000514E6B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8F9033152C2170DE00514E6B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F9033162C2170DE00514E6B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8F90331A2C2170DF00514E6B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F90331B2C2170DF00514E6B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8F9033342C2170E000514E6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8F9033352C2170E000514E6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F9033372C2170E000514E6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RW9N8FZHM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "finc-technologies/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyamisuke.finc-technologies";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F9033382C2170E000514E6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RW9N8FZHM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "finc-technologies/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyamisuke.finc-technologies";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8F90333A2C2170E000514E6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RW9N8FZHM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyamisuke.finc-technologiesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/finc-technologies.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/finc-technologies";
+			};
+			name = Debug;
+		};
+		8F90333B2C2170E000514E6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RW9N8FZHM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyamisuke.finc-technologiesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/finc-technologies.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/finc-technologies";
+			};
+			name = Release;
+		};
+		8F90333D2C2170E000514E6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RW9N8FZHM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyamisuke.finc-technologiesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "finc-technologies";
+			};
+			name = Debug;
+		};
+		8F90333E2C2170E000514E6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RW9N8FZHM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyamisuke.finc-technologiesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "finc-technologies";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F9033072C2170DE00514E6B /* Build configuration list for PBXProject "finc-technologies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F9033342C2170E000514E6B /* Debug */,
+				8F9033352C2170E000514E6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F9033362C2170E000514E6B /* Build configuration list for PBXNativeTarget "finc-technologies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F9033372C2170E000514E6B /* Debug */,
+				8F9033382C2170E000514E6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F9033392C2170E000514E6B /* Build configuration list for PBXNativeTarget "finc-technologiesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F90333A2C2170E000514E6B /* Debug */,
+				8F90333B2C2170E000514E6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F90333C2C2170E000514E6B /* Build configuration list for PBXNativeTarget "finc-technologiesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F90333D2C2170E000514E6B /* Debug */,
+				8F90333E2C2170E000514E6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8FB2DD2C2C21B8050061D9D8 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8FB2DD2D2C21B8300061D9D8 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FB2DD2C2C21B8050061D9D8 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		8FB2DD2F2C21B8300061D9D8 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FB2DD2C2C21B8050061D9D8 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8F9033042C2170DE00514E6B /* Project object */;
+}
